@@ -7,25 +7,25 @@ function updateContainerStyle(hour) {
 
     // Check the hour and change the container style accordingly
     if ((hourNumber >= 0 && hourNumber < 6) || (hourNumber >= 20 && hourNumber <= 23)) {
-        container.style.backgroundImage = 'url(/images/night.jpg)'; // Night background
+        container.style.backgroundImage = 'url(night.jpg)'; // Night background
         submitButton.classList.add('button-night');
         submitButton.classList.remove('button-morning');
         submitButton.classList.remove('button-evening');
         submitButton.classList.remove('button-afternoon');
     } else if (hourNumber >= 6 && hourNumber < 12) {
-        container.style.backgroundImage = 'url(/images/sunrise.jpg)'; // Morning background
+        container.style.backgroundImage = 'url(sunrise.jpg)'; // Morning background
         submitButton.classList.add('button-morning');
         submitButton.classList.remove('button-night');
         submitButton.classList.remove('button-evening');
         submitButton.classList.remove('button-afternoon');
     } else if (hourNumber >= 12 && hourNumber < 18) {
-        container.style.backgroundImage = 'url(/images/day.jpg)'; // Day background
+        container.style.backgroundImage = 'url(day.jpg)'; // Day background
         submitButton.classList.add('button-afternoon');
         submitButton.classList.remove('button-night');
         submitButton.classList.remove('button-morning');
         submitButton.classList.remove('button-evening');
     } else {
-        container.style.backgroundImage = 'url(/images/evening.jpg)'; // Evening background
+        container.style.backgroundImage = 'url(evening.jpg)'; // Evening background
         submitButton.classList.add('button-evening');
         submitButton.classList.remove('button-night');
         submitButton.classList.remove('button-morning');
