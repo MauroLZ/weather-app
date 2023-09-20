@@ -9,17 +9,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
 <div class="container">
     <div class="background-image"></div>
     <div class="content">
-        <h1>Weather App</h1>
+        <div class="name-container">
+            <h1 class="city-name">Weather App</h1>
+            <h1 class="region-name"></h1>
+        </div>
         <form id="weather-form">
             <input type="text" id="location-input" placeholder="Enter location (e.g., city or ZIP code)" required>
-            <button type="submit">Get Weather</button>
+            <button class="submit-button" type="submit">Get Weather</button>
         </form>
-        <div id="result-container" class="result"></div>
+        <div id="result-container" class="result">
+            <div class="temperature-container info-box">
+                <span>Temperature: <i class="fa-solid fa-temperature-three-quarters"></i></span>
+                <span class="temperature-result result"></span>
+            </div>
+            <div class="condition-container info-box">
+                <span>Condition: <i class="fa-solid fa-cloud"></i></span>
+                <span class="condition-result result"></span>
+            </div>
+            <div class="uv-container info-box">
+                <span>UV Index: <i class="fa-solid fa-sun"></i></span>
+                <span class="uv-result result"></span>
+            </div>
+            <div class="hour-container info-box">
+                <span>Time: <i class="fa-solid fa-clock"></i></span>
+                <span class="time-result result"></span>
+            </div>
+        </div>
     </div>
 </div>
 <script src="app.js"></script>
