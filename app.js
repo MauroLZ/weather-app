@@ -1,8 +1,9 @@
+// Function that updates the background image based on the time of day
 function updateContainerStyle(hour) {
     const container = document.querySelector('.container');
     const submitButton = document.querySelector('.submit-button');
 
-    // Convert the hour to a number (assuming the hour is in 24-hour format)
+    // Convert the hour to a number
     const hourNumber = parseInt(hour.split(' ')[1].split(':')[0]);
 
     // Check the hour and change the container style accordingly
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             uvResult.innerHTML = `<p>${data.current.uv}</p>`;
             timeResult.innerHTML = `<p>${data.location.localtime}</p>`;
 
+            // Update the background image based on the time of day
             updateContainerStyle(data.location.localtime);
         } catch (error) {
             // Handle errors and display error message
